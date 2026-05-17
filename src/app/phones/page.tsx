@@ -84,7 +84,7 @@ export default function PhonesPage() {
             />
 
             <h1 className="text-2xl font-bold">
-              LinkShield
+              OlhaOGolpe
             </h1>
 
           </div>
