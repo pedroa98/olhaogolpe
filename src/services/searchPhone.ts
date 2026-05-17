@@ -6,7 +6,7 @@ export async function searchPhone(
 
   try {
 
-    // valida
+    // valida telefone
     if (!phoneNumber.trim()) {
 
       return {
@@ -39,7 +39,7 @@ export async function searchPhone(
       "createdAt"
     );
 
-    // busca resultados
+    // resultados
     const results =
       await query.find();
 
@@ -58,16 +58,17 @@ export async function searchPhone(
     const reports =
       results.map((report) => ({
 
-        id: report.id,
+        id:
+          report.id ?? "",
 
         phoneNumber:
-          report.get("phoneNumber"),
+          report.get("phoneNumber") ?? "",
 
         description:
-          report.get("description"),
+          report.get("description") ?? "",
 
         createdAt:
-          report.createdAt
+          report.createdAt ?? new Date()
 
       }));
 
