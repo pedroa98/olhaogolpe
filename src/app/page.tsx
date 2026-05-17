@@ -120,7 +120,7 @@ export default function Home() {
               />
 
               <h2 className="text-4xl md:text-6xl font-bold">
-                LinkShield
+                OlhaoGolpe
               </h2>
 
             </div>
